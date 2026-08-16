@@ -1,0 +1,13 @@
+---
+description: Core implementation and test conventions for this demo.
+globs: "{src,test}/**/*.mjs"
+alwaysApply: false
+---
+
+- Use ES modules and named exports.
+- Keep functions pure; do not add I/O to domain modules.
+- Return plain objects and preserve existing public shapes.
+- Tests use `node:test` and `node:assert/strict` with behavior-focused names.
+- Run the narrowest affected test file before the complete `node --test` suite.
+- Prefer explicit cases over a new abstraction until at least three call sites need it.
+

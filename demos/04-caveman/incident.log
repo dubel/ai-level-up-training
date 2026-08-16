@@ -1,0 +1,7 @@
+2026-08-16T09:11:02Z INFO deployment=build-842 component=inventory-adapter phase=precheck
+2026-08-16T09:11:03Z INFO vcenter=lab-vc01 auth=ok
+2026-08-16T09:11:03Z WARN template=ubuntu-2404 metadata-cache-age=26h
+2026-08-16T09:11:04Z ERROR template lookup failed: key="ubuntu-2404" cache entry expired ttl=24h
+2026-08-16T09:11:04Z ERROR deployment blocked reason=TEMPLATE_NOT_FOUND
+2026-08-16T09:11:05Z INFO rollback=no-op resources-created=0
+

@@ -1,0 +1,16 @@
+---
+description: Domain and quality rules for the deployment gate demo. Attach manually with @project-context.
+globs:
+alwaysApply: false
+---
+
+# Deployment Gate project rules
+
+- Keep the public return shape exactly `{ allowed, reason }`.
+- Validate domain inputs at the top of `evaluateDeployment` and throw `TypeError` with a message naming the invalid field.
+- Use lowercase domain values (`production`, `passed`, `low`).
+- Prefer an early return for every denial condition.
+- Do not add a class, factory, strategy, schema library, or configuration layer for a single rule.
+- Add tests using `node:test` and `node:assert/strict` next to the existing cases.
+- Run `node --test test/deploymentGate.test.mjs`, then `node --test`.
+
