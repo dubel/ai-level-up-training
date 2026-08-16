@@ -1,0 +1,9 @@
+{
+  "name": "ai-level-up-training-eng",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test demos/*/test/*.test.mjs && node scripts/validate.mjs"
+  }
+}

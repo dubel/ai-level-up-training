@@ -1,0 +1,4 @@
+- Cause: the `ubuntu-2404` metadata cache entry expired.
+- Evidence: `metadata-cache-age=26h`, `ttl=24h`, followed by `template lookup failed`.
+- Fix: after expiration, refresh the metadata before returning `TEMPLATE_NOT_FOUND`.
+- Verification: repeat the precheck in the lab; lookup should retrieve a fresh entry and proceed. Authentication succeeded and no resources were created. The log does not explain why automatic refresh failed.

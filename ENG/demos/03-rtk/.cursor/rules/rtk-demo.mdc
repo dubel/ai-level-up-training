@@ -1,0 +1,11 @@
+---
+description: Use RTK only during the explicit RTK workshop demo.
+globs:
+alwaysApply: false
+---
+
+- For noisy tests use `rtk test <command>` when RTK is installed.
+- Never claim RTK savings equal total session or billing savings.
+- If filtered output is insufficient to diagnose a failure, inspect the full saved log or rerun the narrow command without filtering.
+- Do not install software or change global Cursor configuration without explicit user approval.
+

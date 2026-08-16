@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050507">
+  <title>AI Level Up — Cursor workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="deck" aria-live="polite">
+    <section class="slide title-slide" data-section="START" data-title="AI Level Up">
+      <div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <p class="eyebrow">CURSOR · AI-ASSISTED DEVELOPMENT</p>
+      <h1>AI Level<br><span>Up</span></h1>
+      <p class="lede">From a well-defined task to a safe team workflow.</p>
+      <div class="title-meta"><span>DEV</span><span>DEVOPS</span><span>QA AUTOMATION</span><span>ARCHITECTURE</span></div>
+    </section>
+
+    <section class="slide statement" data-section="START" data-title="We are not learning prompts">
+      <p class="eyebrow">TODAY'S PERSPECTIVE SHIFT</p>
+      <h2>We are not learning<br><span>“how to prompt ChatGPT.”</span></h2>
+      <p class="big-copy">We are building an environment where an agent can perform more of the work without taking control away from us.</p>
+    </section>
+
+    <section class="slide" data-section="START" data-title="Outcomes">
+      <p class="eyebrow">TODAY'S OUTCOMES</p>
+      <h2>Use this in a real repository tomorrow.</h2>
+      <div class="deliverables">
+        <div><strong>01</strong><p>repository rule</p></div>
+        <div><strong>02</strong><p>repeatable skill</p></div>
+        <div><strong>03</strong><p>dev-ready spec</p></div>
+        <div><strong>04</strong><p>autonomy boundaries</p></div>
+      </div>
+      <p class="caption">Code is a by-product. The workshop product is a repeatable way of working.</p>
+    </section>
+
+    <section class="slide" data-section="START" data-title="Workshop rhythm">
+      <p class="eyebrow">6 HOURS · MOSTLY HANDS-ON</p>
+      <h2>Short input. Demo. Your repository.</h2>
+      <div class="timeline">
+        <span style="--w:15">Orientation</span>
+        <span style="--w:22">Prompt + context</span>
+        <span style="--w:23">Agent + skills</span>
+        <span style="--w:14">Security + cost</span>
+        <span style="--w:12">MCP</span>
+        <span style="--w:14">Spec + challenge</span>
+      </div>
+      <div class="ratio"><b>~35%</b><span>instruction and demos</span><b>~65%</b><span>hands-on work and review</span></div>
+    </section>
+
+    <section class="slide" data-section="START" data-title="Working agreement">
+      <p class="eyebrow">WORKSHOP AGREEMENT</p>
+      <h2>We experiment safely.</h2>
+      <div class="split rules-list">
+        <div>
+          <h3>The agent may</h3>
+          <p>read the repository</p><p>propose a plan</p><p>edit the sandbox</p><p>run tests</p>
+        </div>
+        <div class="warning">
+          <h3>The agent may not act alone</h3>
+          <p>touch production</p><p>use secrets</p><p>delete infrastructure</p><p>merge without review</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide section-slide" data-section="01" data-title="Adoption levels">
+      <span class="section-no">01</span>
+      <div><p class="eyebrow">ORIENTATION</p><h2>Adoption level describes<br>how the work gets done.</h2><p class="lede">Not the model. Not the license. Not the number of generated lines.</p></div>
+    </section>
+
+    <section class="slide" data-section="01" data-title="Practical adoption ladder">
+      <p class="eyebrow">A PRACTICAL WORKSHOP LADDER</p>
+      <h2>Each rung needs stronger guardrails.</h2>
+      <div class="ladder">
+        <div><b>1</b><span>Chat</span></div><div><b>2</b><span>Context</span></div><div><b>3</b><span>Agent</span></div>
+        <div><b>4</b><span>Rules + skills</span></div><div><b>5</b><span>Tools</span></div><div><b>6</b><span>Spec + team</span></div>
+      </div>
+      <p class="source-tag">Adapted from the source material and Steve Yegge's agentic-coding ideas; this is not his literal classification.</p>
+    </section>
+
+    <section class="slide" data-section="01" data-title="Where are we now?">
+      <p class="eyebrow">QUICK CHECK · SHOW OF HANDS</p>
+      <h2>What do you actually do every week?</h2>
+      <ol class="poll">
+        <li><span>1</span>Autocomplete and isolated questions</li>
+        <li><span>2</span>An agent reads several files and proposes a change</li>
+        <li><span>3</span>An agent implements, tests, and corrects</li>
+        <li><span>4</span>The team versions rules, skills, and workflows</li>
+        <li><span>5</span>An agent uses tools and works from an approved spec</li>
+      </ol>
+      <p class="caption">The level is process-specific. You can be at 5 for testing and at 1 for IAM changes.</p>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="1 — Chat">
+      <div class="level-number">1</div>
+      <div class="level-copy"><p class="eyebrow">CHAT</p><h2>“Write this for me…”</h2><p>Snippets, explanations, refactoring ideas.</p><hr><strong>Control:</strong> a human copies and evaluates every output.</div>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="2 — Context">
+      <div class="level-number">2</div>
+      <div class="level-copy"><p class="eyebrow">CONTEXT-AWARE</p><h2>“Understand my code.”</h2><p>The agent finds patterns, history, and tests in the repository.</p><hr><strong>New capability:</strong> selecting the right context, not more context.</div>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="3 — Agent">
+      <div class="level-number">3</div>
+      <div class="level-copy"><p class="eyebrow">AGENTIC</p><h2>“Make the change.”</h2><p>Plan → multiple files → terminal → tests → diff.</p><hr><strong>Role shift:</strong> delegate the outcome, not the next line of code.</div>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="4 — Reusable knowledge">
+      <div class="level-number">4</div>
+      <div class="level-copy"><p class="eyebrow">RULES + SKILLS</p><h2>“Follow our way of working.”</h2><p>Permanent guidance and procedures live in the repository, not in one person's memory.</p><hr><strong>Result:</strong> less repetition, less drift, faster onboarding.</div>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="5 — Tools">
+      <div class="level-number">5</div>
+      <div class="level-copy"><p class="eyebrow">TOOLS + MCP</p><h2>“Check the current state.”</h2><p>Documentation, Jenkins, Git, AWS, and vSphere within explicit permissions.</p><hr><strong>Rule:</strong> the more powerful the tool, the stronger the approval boundary.</div>
+    </section>
+
+    <section class="slide level-slide" data-section="01" data-title="6 — Spec-driven">
+      <div class="level-number">6</div>
+      <div class="level-copy"><p class="eyebrow">SPEC + TEAM</p><h2>“Deliver against the contract.”</h2><p>Problem → spec → plan → implementation → tests → review.</p><hr><strong>Scale:</strong> more autonomy follows from a better contract.</div>
+    </section>
+
+    <section class="slide statement" data-section="01" data-title="North star">
+      <p class="eyebrow">NORTH STAR · NOT TOMORROW'S TARGET</p>
+      <h2>From one agent<br><span>to coordinated work.</span></h2>
+      <div class="factory-flow"><span>intent</span><i>→</i><span>spec</span><i>→</i><span>worker agents</span><i>→</i><span>quality gates</span><i>→</i><span>merge queue</span></div>
+      <p class="source-tag">Inspired by Steve Yegge's Gas Town. Master one agent and durable context before scaling out.</p>
+    </section>
+
+    <section class="slide demo-slide" data-section="01" data-title="Demo: one task">
+      <p class="eyebrow">DEMO · 8 MIN</p>
+      <h2>The same task with three levels of control.</h2>
+      <div class="demo-steps">
+        <div><b>A</b><code>Add validation.</code><small>No contract</small></div>
+        <div><b>B</b><code>Investigate existing patterns, then plan.</code><small>Context + plan</small></div>
+        <div><b>C</b><code>Implement the AC, run tests, show the diff.</code><small>Delegated outcome</small></div>
+      </div>
+      <p class="callout">Do not compare how polished the answers sound. Compare how much a human must correct.</p>
+    </section>
+
+    <section class="slide section-slide" data-section="02" data-title="Prompting and context">
+      <span class="section-no">02</span>
+      <div><p class="eyebrow">CONTEXT ENGINEERING</p><h2>A good prompt<br>is a contract.</h2><p class="lede">The model does not need magic words. It needs a goal and a testable boundary.</p></div>
+    </section>
+
+    <section class="slide" data-section="02" data-title="Task contract">
+      <p class="eyebrow">SIX ELEMENTS OF A GOOD TASK</p>
+      <h2>Tell the agent what “done” means.</h2>
+      <div class="contract-grid">
+        <div><b>G</b><span>Goal</span><p>What outcome?</p></div><div><b>C</b><span>Context</span><p>What must it know?</p></div>
+        <div><b>C</b><span>Constraints</span><p>What must not change?</p></div><div><b>P</b><span>Patterns</span><p>What should it follow?</p></div>
+        <div><b>AC</b><span>Acceptance</span><p>How will we check?</p></div><div><b>V</b><span>Verification</span><p>What should it run?</p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-section="02" data-title="Prompt before and after">
+      <p class="eyebrow">BEFORE / AFTER</p>
+      <h2>Precision removes guesswork.</h2>
+      <div class="prompt-compare">
+        <div><span class="label">BEFORE</span><code>Add retries to the deployer.</code><p>The model chooses scope, pattern, limits, and tests.</p></div>
+        <div class="good"><span class="label">AFTER</span><code>Add at most two retries for transient errors only. Follow RetryPolicy. No new library. Add tests and run the test file.</code><p>The agent makes implementation decisions, not product decisions.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-section="02" data-title="Context pyramid">
+      <p class="eyebrow">CONTEXT THAT EARNS ITS PLACE</p>
+      <h2>Signal first. Detail on demand.</h2>
+      <div class="context-pyramid">
+        <div><b>1</b><span>task + AC</span></div><div><b>2</b><span>files and a similar pattern</span></div>
+        <div><b>3</b><span>rules / project context</span></div><div><b>4</b><span>history, docs, tools — on demand</span></div>
+      </div>
+      <p class="caption">Do not tag the entire repository “just in case.” Cursor can search for context when needed.</p>
+    </section>
+
+    <section class="slide" data-section="02" data-title="The agent loop in Cursor">
+      <p class="eyebrow">CURSOR · PLAN MODE</p>
+      <h2>A verifiable plan first. Autonomy second.</h2>
+      <div class="loop"><div>investigate</div><i>→</i><div>plan</div><i>→</i><div class="accent">approve</div><i>→</i><div>implement</div><i>→</i><div>test</div><i>→</i><div class="accent">review</div></div>
+      <ul class="short-list"><li>Shift+Tab switches Plan Mode.</li><li>A new task usually means a new conversation.</li><li>If the agent drifts: stop, return to the plan, fix the contract.</li></ul>
+      <p class="source-tag">Source: Cursor, Best practices for coding with agents.</p>
+    </section>
+
+    <section class="slide exercise-slide" data-section="02" data-title="Exercise: prompt lab">
+      <p class="eyebrow">HANDS-ON · 30 MIN · DEMO 01</p>
+      <h2>Turn a task into a contract.</h2>
+      <div class="exercise-layout"><div><ol><li>Choose a real 30–60 minute task.</li><li>Run the one-sentence version.</li><li>Stop before any changes.</li><li>Add context, constraints, AC, and verification.</li><li>Compare the plan and the agent's questions.</li></ol></div><aside><b>Output</b><p>One prompt another person can use without verbal clarification.</p><b>We do not score</b><p>Response length or a confident tone.</p></aside></div>
+    </section>
+
+    <section class="slide section-slide" data-section="03" data-title="The system around the agent">
+      <span class="section-no">03</span>
+      <div><p class="eyebrow">REUSABLE ENGINEERING KNOWLEDGE</p><h2>Stop repeating<br>the prompt.</h2><p class="lede">Version team knowledge with the code.</p></div>
+    </section>
+
+    <section class="slide" data-section="03" data-title="Rule vs skill vs hook">
+      <p class="eyebrow">ONE QUESTION → ONE MECHANISM</p>
+      <h2>Do not turn rules into a dumping ground.</h2>
+      <table class="decision-table"><tbody>
+        <tr><th>Rule</th><td>What must the agent always know, globally or for selected files?</td><td>API error standard</td></tr>
+        <tr><th>Skill</th><td>How should it perform a specific type of task?</td><td>create an integration test</td></tr>
+        <tr><th>Command</th><td>Which workflow do I start manually?</td><td>/review-change</td></tr>
+        <tr><th>Hook</th><td>What should happen automatically?</td><td>run a check after edits</td></tr>
+        <tr><th>Tool / MCP</th><td>What can the agent reach or operate?</td><td>read a Jenkins result</td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="slide" data-section="03" data-title="Anatomy of a Cursor project">
+      <p class="eyebrow">PROJECT MEMORY AND CAPABILITIES</p>
+      <h2>Small files. Clear scope. Git.</h2>
+      <pre class="tree"><span>repo/</span>
+├── <b>AGENTS.md</b>                     # simple global instruction
+├── <b>.cursor/rules/*.mdc</b>           # permanent / scoped rules
+├── <b>.cursor/skills/&lt;name&gt;/SKILL.md</b># dynamically loaded procedures
+├── <b>.cursor/commands/*.md</b>         # manual workflows
+├── <b>.cursor/hooks.json</b>            # automatic reactions
+├── <b>.cursor/mcp.json</b>              # external tools
+└── <b>.cursor/plans/</b>                # saved plans</pre>
+      <p class="source-tag">Paths follow current Cursor documentation; skill and hook availability depends on version and organization policy.</p>
+    </section>
+
+    <section class="slide" data-section="03" data-title="Anatomy of a skill">
+      <p class="eyebrow">SKILL = PROCEDURE + CONTEXT + TEST</p>
+      <h2>Reusable engineering knowledge.</h2>
+      <div class="skill-anatomy"><pre>---
+name: create-integration-test
+description: Use when adding...
+---
+
+1. Find a similar test.
+2. Use the existing fixture.
+3. Add happy + negative paths.
+4. Run the narrowest test.
+5. Report coverage gaps.</pre><div><b>A good skill is</b><p>small</p><p>unambiguous</p><p>repeatable</p><p>verifiable</p></div></div>
+    </section>
+
+    <section class="slide exercise-slide" data-section="03" data-title="Exercise: build a skill">
+      <p class="eyebrow">HANDS-ON · 40 MIN · DEMO 02</p>
+      <h2>Teach the agent one process.</h2>
+      <div class="two-teams"><div><h3>Architecture / DevOps</h3><p>HLD · AWS change · vSphere operation · documentation</p></div><div><h3>Dev / QA</h3><p>test plan · NUnit · Playwright · integration test · Jenkins analysis</p></div></div>
+      <p class="callout">Requirement: the skill identifies pattern sources, verification commands, and stop conditions.</p>
+    </section>
+
+    <section class="slide section-slide" data-section="04" data-title="Security">
+      <span class="section-no">04</span>
+      <div><p class="eyebrow">PROMPT INJECTION + EXCESSIVE AGENCY</p><h2>Text is data.<br>Not authority.</h2><p class="lede">A README, ticket, API response, or MCP result can contain hostile instructions.</p></div>
+    </section>
+
+    <section class="slide" data-section="04" data-title="Prompt-injection chain">
+      <p class="eyebrow">INDIRECT PROMPT INJECTION</p>
+      <h2>The attack arrives with the context.</h2>
+      <div class="attack-chain"><span>Issue / README / web</span><i>→</i><span class="danger">“ignore rules”</span><i>→</i><span>agent</span><i>→</i><span class="danger">tool call</span><i>→</i><span>impact</span></div>
+      <div class="defenses"><b>Separate instructions from data.</b><b>Least privilege.</b><b>Validate arguments and output.</b><b>Approval for side effects.</b></div>
+      <p class="source-tag">Source: OWASP LLM Prompt Injection Prevention Cheat Sheet.</p>
+    </section>
+
+    <section class="slide" data-section="04" data-title="Autonomy boundaries">
+      <p class="eyebrow">APPROVAL LADDER</p>
+      <h2>Autonomy depends on reversibility.</h2>
+      <div class="approval">
+        <div class="safe"><b>AUTO</b><p>read repo<br>search<br>local tests</p></div>
+        <div class="review"><b>REVIEW</b><p>edit files<br>create branch<br>draft docs</p></div>
+        <div class="approve"><b>APPROVAL</b><p>push<br>write external system<br>deploy non-prod</p></div>
+        <div class="blocked"><b>BLOCK / 2-PERSON</b><p>prod deploy<br>IAM / secrets<br>destructive infra</p></div>
+      </div>
+      <p class="caption">Policy is deterministic. The model cannot grant itself additional permissions.</p>
+    </section>
+
+    <section class="slide exercise-slide" data-section="04" data-title="Exercise: injection drill">
+      <p class="eyebrow">HANDS-ON · 10 MIN · DEMO 08</p>
+      <h2>Find the instruction that must not be followed.</h2>
+      <div class="exercise-layout"><div><ol><li>Ask the agent to summarize the vendor docs.</li><li>Do not warn it about the attack.</li><li>Check whether it treats the text as untrusted.</li><li>Add the security rule and run again.</li></ol></div><aside><b>Debrief</b><p>A prompt alone is not a security control. Permissions, approvals, and validation are.</p></aside></div>
+    </section>
+
+    <section class="slide section-slide" data-section="05" data-title="Context economics">
+      <span class="section-no">05</span>
+      <div><p class="eyebrow">COST + PERFORMANCE</p><h2>Less noise.<br>More signal.</h2><p class="lede">Optimize the agent's work, not just the price of one token.</p></div>
+    </section>
+
+    <section class="slide" data-section="05" data-title="Session cost">
+      <p class="eyebrow">COST MODEL</p>
+      <h2>Retries and repeated context compound the cost.</h2>
+      <div class="equation"><span>input</span><i>+</i><span>output</span><i>+</i><span>tool calls</span><i>+</i><span>repeated context</span><i>+</i><span>retries</span></div>
+      <ul class="short-list"><li>Choose the narrowest test and log excerpt.</li><li>Start a new conversation after a logical task is complete.</li><li>Use a strong model for decisions; a cheaper one for mechanical execution.</li><li>Measure outcomes and review time, not token count alone.</li></ul>
+    </section>
+
+    <section class="slide" data-section="05" data-title="RTK, Caveman, Ponytail">
+      <p class="eyebrow">THREE DIFFERENT LEVERS</p>
+      <h2>They do not compress the same thing.</h2>
+      <div class="three-tools">
+        <div><b>RTK</b><span>terminal → input</span><p>Filters noisy command output before the model sees it.</p></div>
+        <div><b>Caveman</b><span>agent → output</span><p>Shortens response prose while preserving technical substance.</p></div>
+        <div><b>Ponytail</b><span>decision → code</span><p>Forces the simplest solution and actively looks for code to remove.</p></div>
+      </div>
+      <p class="source-tag">RTK reports reductions in shell output, not the whole bill. Caveman can cost more when an answer is already short.</p>
+    </section>
+
+    <section class="slide exercise-slide" data-section="05" data-title="Exercise: cost before and after">
+      <p class="eyebrow">HANDS-ON · 25 MIN · DEMO 03–05</p>
+      <h2>Measure before you “optimize.”</h2>
+      <div class="measure-grid"><div><b>1</b><p>Generate noisy test output.</p></div><div><b>2</b><p>Compare it with RTK.</p></div><div><b>3</b><p>Shorten an explanation with Caveman.</p></div><div><b>4</b><p>Cut unnecessary code with Ponytail.</p></div></div>
+      <p class="callout">Record three separate outcomes: fewer bytes, less review time, and less code.</p>
+    </section>
+
+    <section class="slide" data-section="06" data-title="MCP or RAG">
+      <p class="eyebrow">DO NOT START WITH THE TECHNOLOGY</p>
+      <h2>Name the missing capability first.</h2>
+      <div class="decision-flow">
+        <div><b>Permanent guidance?</b><span>Rule</span></div><div><b>Repeatable procedure?</b><span>Skill</span></div>
+        <div><b>Small, known context?</b><span>File / @context</span></div><div><b>Large, changing knowledge?</b><span>Retrieval / RAG</span></div>
+        <div><b>Operation or live data?</b><span>Tool / MCP</span></div><div><b>Automatic reaction?</b><span>Hook</span></div>
+      </div>
+      <p class="caption">MCP is an access protocol. RAG is a method for selecting knowledge. They can coexist, but solve different problems.</p>
+    </section>
+
+    <section class="slide demo-slide" data-section="06" data-title="Context7 before and after">
+      <p class="eyebrow">DEMO · 20 MIN · DEMO 06</p>
+      <h2>Model memory versus current documentation.</h2>
+      <div class="context7"><div><span>WITHOUT MCP</span><p>The response can mix versions and obsolete APIs.</p><code>How do I implement X in Playwright?</code></div><i>→</i><div class="good"><span>WITH CONTEXT7</span><p>Resolve the library and version first, then retrieve the right docs.</p><code>Use Context7. Verify against package.json.</code></div></div>
+      <p class="callout">Start read-only. Review tool-call arguments. Do not enable auto-run “for the demo.”</p>
+      <p class="source-tag">Cursor MCP + Context7: `.cursor/mcp.json`, remote endpoint `https://mcp.context7.com/mcp`.</p>
+    </section>
+
+    <section class="slide" data-section="07" data-title="BMAD Quick Flow">
+      <p class="eyebrow">SPEC-DRIVEN · DEMO 07</p>
+      <h2>The spec is a contract between a human and an agent.</h2>
+      <div class="bmad-flow"><div><b>1</b><span>Understand</span><small>delta + scope</small></div><i>→</i><div><b>2</b><span>Investigate</span><small>files + patterns</small></div><i>→</i><div><b>3</b><span>Spec</span><small>tasks + Given/When/Then</small></div><i>→</i><div><b>4</b><span>Quick dev</span><small>code + tests</small></div><i>→</i><div><b>5</b><span>Adversarial review</span><small>fresh context</small></div></div>
+      <p class="caption">Full BMAD is optional. Keep the principle: remove ambiguity before the agent starts coding.</p>
+      <p class="source-tag">Based on the local BMAD Quick Flow: quick-spec + quick-dev.</p>
+    </section>
+
+    <section class="slide finale" data-section="FINALE" data-title="Team challenge">
+      <p class="eyebrow">TEAM CHALLENGE · 25 MIN + 10 MIN DEMO</p>
+      <h2>Build tomorrow's workflow.</h2>
+      <div class="final-flow"><span>Problem</span><i>→</i><span>Context</span><i>→</i><span>Rules</span><i>→</i><span>Skill</span><i>→</i><span>Tools</span><i>→</i><span>Tests</span><i>→</i><span>Approval</span></div>
+      <div class="final-grid"><div><b>Architecture / DevOps</b><p>An HLD or a safe AWS/vSphere change plan.</p></div><div><b>Dev / QA</b><p>Feature → test plan → NUnit/Playwright → coverage gaps.</p></div><div><b>5-minute demo</b><p>What works? Where does the agent stop? How will you measure impact?</p></div></div>
+      <p class="closing">Starting tomorrow: one rule · one skill · one measured workflow.</p>
+    </section>
+  </main>
+
+  <div id="progress" aria-hidden="true"><span></span></div>
+  <div id="chrome">
+    <button id="overviewButton" type="button" aria-label="Show all slides">O</button>
+    <span id="sectionLabel">START</span>
+    <span id="counter">01 / 39</span>
+  </div>
+  <dialog id="helpDialog">
+    <h2>Controls</h2>
+    <p><kbd>→</kbd> <kbd>Space</kbd> next · <kbd>←</kbd> previous · <kbd>O</kbd> overview · <kbd>F</kbd> full screen · <kbd>Home</kbd>/<kbd>End</kbd></p>
+    <button type="button">Close</button>
+  </dialog>
+  <script type="module" src="slides.js"></script>
+</body>
+</html>

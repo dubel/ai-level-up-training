@@ -1,0 +1,8 @@
+{
+  "name": "context7-training-fixture",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "1.55.0"
+  }
+}
+
