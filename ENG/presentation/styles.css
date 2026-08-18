@@ -7,6 +7,9 @@
   --pink: #f044a5;
   --pink-flat: #c92f82;
   --pink-dark: #6e174d;
+  --hover-panel: #271321;
+  --hover-panel-strong: #351529;
+  --hover-outline: rgba(240, 68, 165, .72);
   --line: #302832;
   --safe: #79d6b1;
   --warn: #f0bb62;
@@ -231,6 +234,126 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
 .final-grid div { min-height: 125px; padding: 20px; background: rgba(17,17,22,.93); border-top: 4px solid var(--pink); }
 .final-grid b { font-size: 15px; }.final-grid p { margin-top: 14px; color: var(--muted); font-size: 14px; }
 .closing { margin-top: 25px; color: #fff; font-size: 20px; font-weight: 850; }
+
+/*
+ * Presentation interactions
+ *
+ * Hover is used as a presenter's focus cue, not as hidden navigation. The
+ * content remains complete without it, and the same visual language is used
+ * for choices, stages, comparisons, and process steps across the deck.
+ */
+@media (hover: hover) and (pointer: fine) {
+  :is(
+    .deliverables div,
+    .timeline span,
+    .rules-list > div,
+    .ladder div,
+    .poll li,
+    .factory-flow span,
+    .demo-steps div,
+    .contract-grid div,
+    .prompt-compare > div,
+    .context-pyramid div,
+    .loop div,
+    .short-list li,
+    .exercise-layout aside,
+    .decision-table tr,
+    .skill-anatomy > div,
+    .two-teams div,
+    .attack-chain span,
+    .defenses b,
+    .approval > div,
+    .equation span,
+    .three-tools div,
+    .measure-grid div,
+    .decision-flow div,
+    .context7 > div,
+    .bmad-flow div,
+    .final-flow span,
+    .final-grid div
+  ) {
+    transition:
+      background-color .16s ease,
+      border-color .16s ease,
+      box-shadow .16s ease,
+      color .16s ease,
+      opacity .16s ease,
+      transform .16s ease;
+  }
+
+  :is(
+    .deliverables div,
+    .timeline span,
+    .rules-list > div,
+    .ladder div,
+    .poll li,
+    .factory-flow span,
+    .demo-steps div,
+    .contract-grid div,
+    .prompt-compare > div,
+    .context-pyramid div,
+    .loop div,
+    .exercise-layout aside,
+    .skill-anatomy > div,
+    .two-teams div,
+    .attack-chain span,
+    .approval > div,
+    .equation span,
+    .three-tools div,
+    .measure-grid div,
+    .decision-flow div,
+    .context7 > div,
+    .bmad-flow div,
+    .final-flow span,
+    .final-grid div
+  ):hover {
+    background-color: var(--hover-panel);
+    box-shadow:
+      inset 0 0 0 1px var(--hover-outline),
+      0 12px 30px rgba(110, 23, 77, .2);
+    transform: translateY(-3px);
+  }
+
+  .poll li:hover {
+    border-left-color: var(--pink);
+    background-color: var(--hover-panel-strong);
+  }
+
+  :is(.ladder div:last-child, .loop .accent, .context-pyramid div:first-child):hover {
+    background-color: #e0449a;
+  }
+
+  :is(.prompt-compare > .good, .context7 > div.good):hover {
+    background-color: var(--hover-panel-strong);
+  }
+
+  .decision-table tr:hover {
+    background: var(--hover-panel);
+    box-shadow: inset 4px 0 0 var(--pink);
+  }
+
+  .decision-table tr:hover th { color: #ff83c7; }
+
+  :is(.short-list li, .defenses b):hover {
+    border-color: var(--pink);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .attack-chain .danger:hover { background-color: #711730; }
+
+  #chrome button:hover {
+    border-color: var(--pink);
+    background: var(--hover-panel);
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide.active { animation: none; }
+  .slide *, #progress span { transition-duration: 0s !important; }
+  .slide *:hover { transform: none !important; }
+}
 
 #progress { position: fixed; left: 0; right: 0; bottom: 0; height: 4px; background: #141116; z-index: 20; }
 #progress span { display: block; height: 100%; width: 0; background: var(--pink); transition: width .2s ease; }
