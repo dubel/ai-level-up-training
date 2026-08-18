@@ -199,7 +199,7 @@
       <table class="decision-table"><tbody>
         <tr><th>Rule</th><td>What must the agent always know, globally or for selected files?</td><td>API error standard</td></tr>
         <tr><th>Skill</th><td>How should it perform a specific type of task?</td><td>create an integration test</td></tr>
-        <tr><th>Command</th><td>Which workflow do I start manually?</td><td>/review-change</td></tr>
+        <tr class="deprecated"><th>Command</th><td>Which workflow do I start manually?</td><td>/review-change</td></tr>
         <tr><th>Hook</th><td>What should happen automatically?</td><td>run a check after edits</td></tr>
         <tr><th>Tool / MCP</th><td>What can the agent reach or operate?</td><td>read a Jenkins result</td></tr>
       </tbody></table>
@@ -212,7 +212,7 @@
 ├── <b>AGENTS.md</b>                     # simple global instruction
 ├── <b>.cursor/rules/*.mdc</b>           # permanent / scoped rules
 ├── <b>.cursor/skills/&lt;name&gt;/SKILL.md</b># dynamically loaded procedures
-├── <b>.cursor/commands/*.md</b>         # manual workflows
+<span class="deprecated-line">├── <b>.cursor/commands/*.md</b>         # manual workflows</span>
 ├── <b>.cursor/hooks.json</b>            # automatic reactions
 ├── <b>.cursor/mcp.json</b>              # external tools
 └── <b>.cursor/plans/</b>                # saved plans</pre>

@@ -172,9 +172,17 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
 .decision-table th, .decision-table td { padding: 15px 18px; border-bottom: 1px solid var(--line); text-align: left; }
 .decision-table th { width: 140px; color: var(--pink); font-size: 20px; }
 .decision-table td { font-size: 16px; }.decision-table td:last-child { width: 250px; color: var(--muted); }
+.decision-table tr.deprecated { opacity: .46; }
+.decision-table tr.deprecated > * {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--pink);
+  text-decoration-thickness: 2px;
+}
 
 .tree { margin: 24px 0 0; padding: 28px 34px; background: #0d0c0f; border-left: 6px solid var(--pink); color: #aaa1aa; font-size: 18px; line-height: 1.75; }
 .tree span { color: white; }.tree b { color: #ff7ac3; }
+.tree .deprecated-line { color: inherit; opacity: .46; text-decoration-line: line-through; text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
+.tree .deprecated-line b { color: inherit; }
 
 .skill-anatomy { display: grid; grid-template-columns: 1.65fr .65fr; gap: 28px; }
 .skill-anatomy pre { margin: 0; padding: 22px 26px; background: #0e0c10; border-left: 5px solid var(--pink); color: #ddd6db; font-size: 16px; line-height: 1.4; }
